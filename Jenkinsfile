@@ -1,9 +1,21 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+                image 'openjdk:8u171-alpine3.7'
+                args '-p 8080:8080'
+        }
+    }
     stages {
-        stage('Example') {
+        stage('Build Project') {
             steps {
-                echo 'Hello World'
+                echo 'Building .jar'
+                sh './gradlew build'
+            }
+        }
+        stage('Deploying') {
+            steps {
+                echo 'Deploying'
+                sh './gradlew run'
             }
         }
     }
