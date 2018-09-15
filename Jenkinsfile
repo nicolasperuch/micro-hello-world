@@ -3,22 +3,14 @@ pipeline {
     stages {
         stage('Build Project') {
             steps {
-                echo 'Building .jar'
-            }
-        }
-        stage('Testing') {
-            steps {
-                echo 'Running tests'
-            }
-        }
-        stage('Deploying') {
-            steps {
-                echo 'Deploying'
+                echo 'Start Application'
+                sh './gradlew run'
             }
         }
         stage('Done!') {
             steps {
                 echo 'Done :)'
+                echo 'Application running at: localhost:8081'
             }
         }
     }
