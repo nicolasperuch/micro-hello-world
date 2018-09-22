@@ -1,15 +1,1 @@
-pipeline {
-    agent any
-    stages {
-        stage('Build Project') {
-            steps {
-                echo 'Start Application'
-            }
-        }
-        stage('Done!') {
-            steps {
-                echo 'Done :)'
-            }
-        }
-    }
-}
+This is a test file :)
