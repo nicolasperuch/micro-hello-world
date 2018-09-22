@@ -3,13 +3,11 @@ pipeline{
     stages {		
         stage('Build Project') {		
             steps {		
-                echo 'Start Application'		
-            }		
+                echo "Starting deploy"            }		
         }		
         stage('Done!') {		
             steps {		
-                echo 'Done :)'		
-            }		
+                echo "deploy completed"            }		
         }		
     }		
 } 
