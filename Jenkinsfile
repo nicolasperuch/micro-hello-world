@@ -3,11 +3,11 @@ pipeline{
     stages {		
         stage('Build Project') {		
             steps {		
-                echo "first message"            }		
+                echo "project-message-inv"            }		
         }		
         stage('Done!') {		
             steps {		
-                echo "end message"            }		
+                echo "done-message-inv"            }		
         }		
     }		
 } 
